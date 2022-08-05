@@ -1,3 +1,4 @@
+import { CursosService } from './cursos/cursos.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,23 +9,31 @@ import { HomeComponent } from './home/home.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
 
+import { MaterializeButtonModule , MaterializeCardModule } from 'materialize-angular'
+
 import { routing } from './app.routing';
+import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CursosComponent,
-    LoginComponent
+    LoginComponent,
+    CursoDetalheComponent,
+    CursoNaoEncontradoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-   routing
+   routing,
+   MaterializeButtonModule ,
+   MaterializeCardModule
     
   ],
-  providers: [],
+  providers: [CursosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
