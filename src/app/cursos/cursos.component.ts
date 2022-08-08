@@ -12,7 +12,7 @@ export class CursosComponent implements OnInit {
 
   cursos!: any[];
   pagina!: number;
-  isncricao!: Subscription;
+  inscricao!: Subscription;
 
   constructor(
     private cursosService: CursosService,
@@ -22,7 +22,7 @@ export class CursosComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursos = this.cursosService.getCursos();
-    this.isncricao = this.route.queryParams.subscribe(
+    this.inscricao = this.route.queryParams.subscribe(
       (queryParams: any) => { 
         this.pagina = queryParams ['pagina'];
       }
@@ -30,7 +30,7 @@ export class CursosComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.isncricao.unsubscribe();
+    this.inscricao.unsubscribe();
   }
 proximaPagina(){
   //this.pagina++;
