@@ -1,4 +1,6 @@
-import { CursosService } from './cursos/cursos.service';
+import { AlunosModule } from './alunos/alunos.module';
+
+//import { CursosService } from './cursos/cursos.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 //import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
-//import { HttpModule } from "@angular/http";
+//import { HttpModule } from '@angular/http';
 import { MaterializeButtonModule , MaterializeCardModule } from 'materialize-angular'
 
 //import { routing } from './app.routing';
@@ -24,21 +26,20 @@ import { CursosModule } from './cursos/cursos.module';
     //CursosComponent,
     LoginComponent,
     //CursoDetalheComponent,
-    //CursoNaoEncontradoComponent
+    //CursoNaoEncontradoComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
    AppRoutingModule,
-    BrowserAnimationsModule,
- // routing,
-   MaterializeButtonModule ,
-   MaterializeCardModule,
-   //HttpModule,
-   CursosModule
+   // routing,
+  // HttpModule,
+   CursosModule,
+   AlunosModule
     
   ],
-  providers: [CursosService],
+  //providers: [CursosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
