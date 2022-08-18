@@ -1,11 +1,9 @@
-
-
 //import { CursosService } from './cursos/cursos.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 //import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
@@ -16,7 +14,6 @@ import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app.routing.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,18 +22,15 @@ import { AppRoutingModule } from './app.routing.module';
     LoginComponent,
     //CursoDetalheComponent,
     //CursoNaoEncontradoComponent,
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
-   AppRoutingModule,
-   routing,
-
-   
-    
+    AppRoutingModule,
+    HttpClientModule,
+    routing,
   ],
-  //providers: [CursosService],
-  bootstrap: [AppComponent]
+  providers: [], // colocar component api
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

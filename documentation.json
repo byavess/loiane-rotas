@@ -328,7 +328,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>home works!</p>\n"
+            "templateData": "<p>teste storybook</p>\n"
         },
         {
             "name": "LoginComponent",
@@ -476,13 +476,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-56f557bb8ca9998cabacaa7e1d94dec25075661a7af133ceeba740d4641bef4e4bf901911faedb6fe6f64d8c26e6df10d0aa856c68baa07889cc4dfb2cfdc8e9",
+            "id": "module-AppModule-c7092d09898c1e6dd6e0650049d1148572cb919911cd3955706bf2e4ff93a692ce4f3fb0d4ade3cd67facb80600e5fdefa9ca081906ed13d9f05a038b3c56c39",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "\n\n//import { CursosService } from './cursos/cursos.service';\nimport { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\n\nimport { HomeComponent } from './home/home.component';\n//import { CursosComponent } from './cursos/cursos.component';\nimport { LoginComponent } from './login/login.component';\n\nimport { routing } from './app.routing';\n//import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';\n//import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';\nimport { FormsModule } from '@angular/forms';\nimport { AppRoutingModule } from './app.routing.module';\n\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    HomeComponent,\n    //CursosComponent,\n    LoginComponent,\n    //CursoDetalheComponent,\n    //CursoNaoEncontradoComponent,\n\n  ],\n  imports: [\n    BrowserModule,\n    FormsModule,\n   AppRoutingModule,\n   routing,\n\n   \n    \n  ],\n  //providers: [CursosService],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "//import { CursosService } from './cursos/cursos.service';\nimport { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { HttpClientModule } from '@angular/common/http';\nimport { HomeComponent } from './home/home.component';\n//import { CursosComponent } from './cursos/cursos.component';\nimport { LoginComponent } from './login/login.component';\n\nimport { routing } from './app.routing';\n//import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';\n//import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';\nimport { FormsModule } from '@angular/forms';\nimport { AppRoutingModule } from './app.routing.module';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    HomeComponent,\n    //CursosComponent,\n    LoginComponent,\n    //CursoDetalheComponent,\n    //CursoNaoEncontradoComponent,\n  ],\n  imports: [\n    BrowserModule,\n    FormsModule,\n    AppRoutingModule,\n    HttpClientModule,\n    routing,\n  ],\n  //providers: [CursosService],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -576,6 +576,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/login.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() =>({\n    component: HomeComponent\n})"
             },
             {
                 "name": "environment",
@@ -760,6 +770,18 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
+                }
+            ],
+            "src/stories/login.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/login.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() =>({\n    component: HomeComponent\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1138,6 +1160,16 @@
                 "name": "HeaderComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/login.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
